@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagesMinimalAPINoAuthSwagger", "MessagesMinimalAPINoAuthSwagger.csproj", "{49F66BC3-5314-417E-B5D5-864CE45AFC73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49F66BC3-5314-417E-B5D5-864CE45AFC73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F66BC3-5314-417E-B5D5-864CE45AFC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F66BC3-5314-417E-B5D5-864CE45AFC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F66BC3-5314-417E-B5D5-864CE45AFC73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC15D177-AD39-46A8-A327-3B348AC8C589}
+	EndGlobalSection
+EndGlobal
