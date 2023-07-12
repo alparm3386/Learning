@@ -1,21 +1,28 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
 string jsonFilePath = "messages.json";
 string jsonContent = File.ReadAllText(jsonFilePath);
-var messages = JsonConvert.DeserializeObject<List<Message>>(jsonContent);
+var messages = JsonSerializer.Deserialize<List<Message>>(jsonContent);
 
 // Add the messages list to the DI container as a singleton
-builder.Services.AddSingleton(messages);
+builder.Services.AddSingleton(messages!);
+
+// Add Swagger services
+builder.Services.AddSwaggerGen(swaggerGenOptions =>
+{
+    swaggerGenOptions.SwaggerDoc("v1", new OpenApiInfo { Title = "My Messages API", Version = "v1" });
+});
 
 var app = builder.Build();
 
